@@ -1,4 +1,5 @@
-#How To Use Crashdown.js
+## Note!
+Crashdown is still in the early stages of development. Not all of the features mentioned below exist at this stage, but they will soon :)
 
 ## About
 Crashdown is a simple, file-based web publishing engine. Posts are written in Markdown and URLs are based on your directory structure.
