@@ -7,8 +7,8 @@
     "express": "~3.1.0",
     "consolidate": "~0.8.0",
     "hogan.js": "~2.0.0",
-    "node-markdown": "~0.1.1",
-    "underscore": "~1.4.4"
+    "underscore": "~1.4.4",
+    "highlight.js": "~7.3.0"
   },
   "devDependencies": {},
   "scripts": {
