@@ -6,10 +6,13 @@ var path = require('path');
 var express = require('express');
 var app = express();
 
+
+var themesDir = 'theme';
+
 // set up cons and hogan templating
 app.engine('html', cons.hogan);
 app.set('view engine', 'html');
-app.set('views', path.join(__dirname, 'theme/templates'));
+app.set('views', path.join(__dirname, themesDir, 'templates'));
 
 // routes
 app.get('/', function(req, res){
@@ -33,6 +36,12 @@ app.get('/tag/:tag', function(req,res){
 	res.send('Posts tagged with ' + req.params.tag);
 });
 
+app.get('/static/*', function(req, res){
+	var file = req.params[0];
+
+	res.sendfile(path.join(__dirname, themesDir, file));
+});
+
 app.get('/:slug', function(req, res){
 	page.load(res, __dirname, '',  req.params.slug);
 });
@@ -44,6 +53,7 @@ app.get('/*/:path', function(req, res){
 
 	page.load(res, __dirname, path, slug);
 });
+
 
 var port = config.port || 80; 
 app.listen(port);

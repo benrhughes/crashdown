@@ -1,0 +1,32 @@
+body
+{
+	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.625;
+	background: #e2e2e2;
+}
+
+#content
+{
+	width: 700px;
+}
+
+#header
+{
+	color: #eee;
+	background: #252525;
+	padding-left: 50px;
+	margin-bottom: 2px;
+	margin-top: 40px;
+}
+
+#siteTitle
+{
+	font-weight: bold;
+	padding: 10px 0px 10px 0px;
+}
+
+#post
+{
+	padding: 10px 50px 10px 50px;
+	background: #fff;
+}
