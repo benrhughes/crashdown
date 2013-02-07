@@ -8,7 +8,8 @@
     "consolidate": "~0.8.0",
     "hogan.js": "~2.0.0",
     "underscore": "~1.4.4",
-    "highlight.js": "~7.3.0"
+    "highlight.js": "~7.3.0",
+    "glob": "~3.1.19"
   },
   "devDependencies": {},
   "scripts": {

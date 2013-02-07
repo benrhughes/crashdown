@@ -19,8 +19,8 @@ app.get('/', function(req, res){
 	res.send('Most Recent Page (or maybe index?)');
 });
 
-app.get('/pages/:page', function(req, res){
-	res.send('list of pages');
+app.get('/pages', function(req, res){
+	page.all(res, __dirname);
 });
 
 // get /search?q=term
