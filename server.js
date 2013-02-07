@@ -16,7 +16,8 @@ app.set('views', path.join(__dirname, themesDir, 'templates'));
 
 // routes
 app.get('/', function(req, res){
-	res.send('Most Recent Page (or maybe index?)');
+//	res.send('Most Recent Page (or maybe index?)');
+	res.redirect('/pages');
 });
 
 app.get('/pages', function(req, res){
