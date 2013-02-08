@@ -67,6 +67,11 @@ h2
 	background: #fff;
 }
 
+.prev { float:right; }
+.next { float: left; }
+.prevnext { height: 2em; }
+.prevnext a { text-decoration:none; }
+
 .post
 {
 	max-width: 600px;

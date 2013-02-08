@@ -1,0 +1,12 @@
+{{>head}}
+<div id="postContainer">
+	<div id="post">
+		<h1>All Pages</h1>
+		<ul>
+			{{#pages}}
+			<li><a href="/{{path}}">{{title}}</a>{{#pubDate}} - {{pubDate}}{{/pubDate}}</li>
+			{{/pages}}
+		</ul>
+	</div>
+</div>
+{{>foot}}
