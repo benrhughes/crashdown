@@ -2,7 +2,8 @@
 <div id="postContainer">
 	<div id="post">
 		<h1>{{title}}</h1>
-		<div id="postInfo">Written by <span id="author">{{author}}</span>, <span id="date">{{date}}</span></div>
+		<div id="postInfo">Written by <span id="author">{{author}}</span>
+		{{#pubDate}}, <span id="date">{{pubDate}}</span>{{/pubDate}}</div>
 		<div id="postBody">{{{body}}}</div>
 	</div>
 </div>

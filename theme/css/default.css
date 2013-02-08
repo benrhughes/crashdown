@@ -67,26 +67,26 @@ h2
 	background: #fff;
 }
 
-#post
+.post
 {
 	max-width: 600px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#postInfo
+.postInfo
 {
 	color: #666;
 	font-size: 0.9em;
 	margin-bottom: 20px;
 }
 
-#author
+.author
 {
 	font-weight: bold;
 }
 
-#date
+.date
 {
 }
 

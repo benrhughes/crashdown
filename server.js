@@ -16,12 +16,15 @@ app.set('views', path.join(__dirname, themesDir, 'templates'));
 
 // routes
 app.get('/', function(req, res){
-//	res.send('Most Recent Page (or maybe index?)');
-	res.redirect('/pages');
+	page.pages(res, __dirname, 0);
 });
 
-app.get('/pages', function(req, res){
-	page.all(res, __dirname);
+app.get('/all', function(req, res){
+	page.listAll(res, __dirname);
+});
+
+app.get('/pages/:num', function(req, res){
+	page.pages(res, __dirname, req.params.num);
 });
 
 // get /search?q=term
@@ -44,7 +47,7 @@ app.get('/static/*', function(req, res){
 });
 
 app.get('/:slug', function(req, res){
-	page.load(res, __dirname, '',  req.params.slug);
+	page.page(res, __dirname, '',  req.params.slug);
 });
 
 // GET /some/long/path/to/file
@@ -52,7 +55,7 @@ app.get('/*/:path', function(req, res){
 	var path = req.params.path;
 	var slug = req.params[0];
 
-	page.load(res, __dirname, path, slug);
+	page.page(res, __dirname, path, slug);
 });
 
 page.populateCache(__dirname);
