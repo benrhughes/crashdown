@@ -70,7 +70,13 @@ h2
 .prev { float:right; }
 .next { float: left; }
 .prevnext { height: 2em; }
-.prevnext a { text-decoration:none; }
+
+.prevnext a 
+{ 
+	text-decoration:none; 
+	font-weight: bold;
+	font-size:1.0em;
+}
 
 .post
 {
