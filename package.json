@@ -9,7 +9,9 @@
     "hogan.js": "~2.0.0",
     "underscore": "~1.4.4",
     "highlight.js": "~7.3.0",
-    "glob": "~3.1.19"
+    "glob": "~3.1.19",
+    "marked": "~0.2.8",
+    "watchr": "~2.3.7"
   },
   "devDependencies": {},
   "scripts": {

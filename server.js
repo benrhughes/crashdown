@@ -55,6 +55,8 @@ app.get('/*/:path', function(req, res){
 	page.load(res, __dirname, path, slug);
 });
 
+page.populateCache(__dirname);
+page.watchCache(__dirname);
 
 var port = config.port || 80; 
 app.listen(port);
