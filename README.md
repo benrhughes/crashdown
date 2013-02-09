@@ -22,7 +22,9 @@ There are some configuration options set in `config.json`, such as the port that
 
 	$> forever /var/www/mysite/server.js # starts the server and keeps it running
 
-Using `forever` is completely optional, but it's a nice way to run crashdown in the background while ensuring that it gets restarted should it ever crash.
+Using `forever` is completely optional, but it's a nice way to run crashdown in the background while ensuring that it gets restarted should it ever crash. If you'd prefer to not use it, simply
+
+	$> node /var/www/mysite/server.js
 
 ## Creating a new post
 In mysite/posts:
