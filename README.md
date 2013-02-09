@@ -14,12 +14,15 @@ You can see how development is progressing on the [demo site](http://blog.benrhu
 ## Getting set up
 On your server:
 
-	$> npm install crashdown
+	$> npm install -g crashdown
+	$> npm install -g forever
 	$> crashdown init /var/www/mysite # creates mysite directory and populates it
 	
 There are some configuration options set in `config.json`, such as the port that the server listens on.
 
-	$> crashdown /var/www/mysite # starts the server	
+	$> forever /var/www/mysite/server.js # starts the server and keeps it running
+
+Using `forever` is completely optional, but it's a nice way to run crashdown in the background while ensuring that it gets restarted should it ever crash.
 
 ## Creating a new post
 In mysite/posts:
