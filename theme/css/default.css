@@ -85,6 +85,12 @@ h2
 	margin-right: auto;
 }
 
+.post > h1 > a
+{
+	text-decoration:none;
+	color: #373737;
+}
+
 .postInfo
 {
 	color: #666;

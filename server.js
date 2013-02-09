@@ -36,8 +36,12 @@ app.get('/rss', function(req, res){
 	res.send("Here's an RSS feed for you");
 });
 
+app.get('/tags', function(req, res){
+	page.tags(res);
+});
+
 app.get('/tag/:tag', function(req,res){
-	res.send('Posts tagged with ' + req.params.tag);
+	page.tag(res, req.params.tag);
 });
 
 app.get('/static/*', function(req, res){

@@ -2,12 +2,7 @@
 <div id="postContainer">
 	{{>prevnext}}
 	{{#pages}}
-	<div class="post">
-		<h1>{{title}}</h1>
-		<div class="postInfo">Written by <span class="author">{{author}}</span>
-		{{#pubDate}}, <span class="date">{{pubDate}}</span>{{/pubDate}}</div>
-		<div class="postBody">{{{body}}}</div>
-	</div>
+		{{>pagedata}}
 	<br />
 	{{/pages}}
 	{{>prevnext}}

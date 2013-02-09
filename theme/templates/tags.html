@@ -1,0 +1,10 @@
+{{>head}}
+<div id="postContainer">
+	<h1>Tags</h1>
+	<ul>
+	{{#tags}}
+		<li><a href="/tag/{{.}}">{{.}}</a></li>
+	{{/tags}}
+	</ul>
+</div>
+{{>foot}}
