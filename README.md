@@ -1,5 +1,5 @@
 ## Note!
-Crashdown is still in the early stages of development. Not all of the features mentioned below exist at this stage, but they will soon :)
+Crashdown has reached a stage where it is functional, however the helper scripts described below have not yet been written. If you're keen you can simply clone the git repo then run `node server.js`.
 
 ## About
 Crashdown is a simple, file-based web publishing engine. Posts are written in Markdown and URLs are based on your directory structure.
@@ -9,7 +9,7 @@ For example, the file `/var/www/mysite/posts/2012/04/my-new-post.mkd` will have 
 There is no database involved, which means that you can easily use your version control system of choice to manage and deploy your site.
 
 ## Motivation
-I like writing in markdown, and I like being about to track and move my files around using git. There's plenty of static site generators, but none that I found did quite what I wanted. So, I wrote my own. What's the point of being a dev if you don't make tools you like? :)
+I like writing in markdown, and I like being about to track and move my files around using git. I also have a few sites on self-hosted Wordpress that I wanted to run on something more lightweight. There's plenty of options out there, but none that I found did quite what I wanted. So, I wrote my own. What's the point of being a dev if you don't make tools you like? :)
 
 ## Demo
 [This Coding Life](http://thiscodinglife.com) is running the latest version of crashdown.
