@@ -8,8 +8,11 @@ For example, the file `/var/www/mysite/posts/2012/04/my-new-post.mkd` will have 
 
 There is no database involved, which means that you can easily use your version control system of choice to manage and deploy your site.
 
+## Motivation
+I like writing in markdown, and I like being about to track and move my files around using git. There's plenty of static site generators, but none that I found did quite what I wanted. So, I wrote my own. What's the point of being a dev if you don't make tools you like? :)
+
 ## Demo
-You can see how development is progressing on the [demo site](http://blog.benrhughes.com:3000/). NB, this site will regularly be down.
+[This Coding Life](http://thiscodinglife.com) is running the latest version of crashdown.
 
 ## Getting set up
 On your server:
