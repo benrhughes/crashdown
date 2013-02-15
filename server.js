@@ -6,7 +6,7 @@ var path = require('path');
 var express = require('express');
 var app = express();
 
-
+var uploadsDir = 'uploads';
 var themesDir = 'theme';
 
 // set up cons and hogan templating
@@ -15,6 +15,10 @@ app.set('view engine', 'html');
 app.set('views', path.join(__dirname, themesDir, 'templates'));
 
 // routes
+app.get('/favicon.ico', function(req, res){
+	res.sendfile(path.join(__dirname, 'favicon.ico'));
+});
+
 app.get('/', function(req, res){
 	page.pages(res, __dirname, 0);
 });
@@ -33,7 +37,7 @@ app.get('/search*', function(req, res){
 });
 
 app.get('/rss', function(req, res){
-	res.send("Here's an RSS feed for you");
+	page.rss(res,__dirname);
 });
 
 app.get('/tags', function(req, res){
@@ -44,6 +48,12 @@ app.get('/tag/:tag', function(req,res){
 	page.tag(res, req.params.tag);
 });
 
+app.get('/uploads/*', function(req, res){
+	var file = req.params[0];
+
+	res.sendfile(path.join(__dirname, themesDir, file));
+}
+);
 app.get('/static/*', function(req, res){
 	var file = req.params[0];
 

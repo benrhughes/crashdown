@@ -1,0 +1,7 @@
+Welcome to [crashdown](http://github.com/benrhughes/crashdown). This is an example page to give you an idea of how to get started. 
+
+To create a new page: 
+
+ 1. copy `hello.json` to `pagename.json`
+ 1. create a new file called `pagename.mkd`
+ 1. Fill `pagename.mkd` with [markdown](http://daringfireball.net/projects/markdown/)
