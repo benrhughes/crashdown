@@ -4,7 +4,7 @@ Crashdown has reached a stage where it is functional, however the helper scripts
 ## About
 Crashdown is a simple, file-based web publishing engine. Posts are written in Markdown and URLs are based on your directory structure.
 
-For example, the file `/var/www/mysite/posts/2012/04/my-new-post.mkd` will have a URL of `mysite.com/2012/04/my-new-post`. 
+For example, the file `/home/ben/mysite/posts/2012/04/my-new-post.mkd` will have a URL of `mysite.com/2012/04/my-new-post`. 
 
 There is no database involved, which means that you can easily use your version control system of choice to manage and deploy your site.
 
@@ -19,15 +19,15 @@ On your server:
 
 	$> npm install -g crashdown
 	$> npm install -g forever
-	$> crashdown init /var/www/mysite # creates mysite directory and populates it
+	$> crashdown init /home/ben/mysite # creates mysite directory and populates it
 	
 There are some configuration options set in `config.json`, such as the port that the server listens on.
 
-	$> forever /var/www/mysite/server.js # starts the server and keeps it running
+	$> forever /home/ben/mysite/server.js # starts the server and keeps it running
 
 Using `forever` is completely optional, but it's a nice way to run crashdown in the background while ensuring that it gets restarted should it ever crash. If you'd prefer to not use it, simply
 
-	$> node /var/www/mysite/server.js
+	$> node /home/ben/mysite/server.js
 
 ## Creating a new post
 In mysite/posts:
@@ -39,25 +39,7 @@ This will create `url-slug.mkd` and `url-slug.json`. Edit the .mkd file to conta
 Go to `mysite.com/url-slug` in your browser: your post should be displayed.
 
 ## Setting up git deployment
-On your server:
-
-	$> cd /var/www/mysite
-	$> git init
-	$> git add .
-	$> git commit -m "initial commit"
-
-On your local machine
-
-	$> npm install crashdown
-	$> git clone ssh://user@mysite.com/var/www/mysite
-
-## Deploying with git
-Create a new post in your local clone with `crashdown post <url-slug>`, as above. Then
-
-	$> git commit -am "My new post"
-	$> git push
-
-NB, if you don't want to (or can't) install node and crashdown locally, you can simply create the .mkd and .json files yourself. `crashdown post` is just a helper to save you time.
+Follow the instructions in this [excellent article](http://toroid.org/ams/git-website-howto).
 
 ## Testing before deployment
 The entire site is contained in the git repository, which means that it can be tested locally before pushing by running `crashdown mysite` on your local machine, then going to `http://localhost` in your browser.
