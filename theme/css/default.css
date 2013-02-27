@@ -12,6 +12,13 @@ h1 { font-size: 2em; }
 
 h2 { font-size: 1em; }
 
+blockquote
+{
+	font: 17px Georgia;
+	margin: 0px 50px 0px 50px;
+	font-style : italic;
+}
+
 #content
 {
 	max-width: 800px;
@@ -63,8 +70,8 @@ h2 { font-size: 1em; }
 	padding: 10px 10px 30px 10px;
 }
 
-.prev { float:right; }
-.next { float: left; }
+.prev { float: left; }
+.next { float: right; }
 .prevnext { height: 2em; }
 
 .prevnext a 

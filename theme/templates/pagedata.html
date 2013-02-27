@@ -1,5 +1,14 @@
 <div class="post">
 	<h1><a href="/{{path}}">{{title}}</a></h1>
-	<div class="postInfo">{{#author}}Written by <span class="author">{{author}}</span>{{/author}}{{#pubDate}}, <span class="date">{{pubDate}}</span>{{/pubDate}}</div>
+	<div class="postInfo">
+		<div class="by">
+			Written by <span class="author"><a href="http://benrhughes.com">{{author}}</a></span>{{#pubDate}}, <span class="date">{{pubDate}}</span>{{/pubDate}}
+		</div>
+		<div class="tags">
+			{{#tags}}
+				<a href="/tag/{{.}}">{{.}}</a>&nbsp;
+			{{/tags}}
+		</div>
+	</div>
 	<div class="postBody">{{{body}}}</div>
 </div>
