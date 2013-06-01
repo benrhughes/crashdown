@@ -1,5 +1,6 @@
 ## 10 Second Setup
 	$> git clone git@github.com:benrhughes/crashdown.git /home/ben/mysite
+	$> cd /home/ben/mysite && npm install 
 	$> node /home/ben/mysite/server.js	
 	$> http://localhost:3000 in your browser
 	
@@ -20,6 +21,7 @@ I like writing in markdown, and I like being about to track and move my files ar
 On your server:
 
 	$> git clone git@github.com:benrhughes/crashdown.git /home/ben/mysite
+	$> cd /home/ben/mysite $$ npm install
 
 Optionally:
 
