@@ -1,11 +1,12 @@
 ## 10 Second Setup
 	$> git clone git@github.com:benrhughes/crashdown.git /home/ben/mysite
 	$> node /home/ben/mysite/server.js	
+	$> http://localhost:3000 in your browser
 	
 ## About
 Crashdown is a simple, file-based web publishing engine. Posts are written in Markdown and URLs are based on your directory structure.
 
-For example, the file `/home/ben/mysite/posts/2012/04/my-new-post.mkd` will have a URL of `mysite.com/2012/04/my-new-post`. 
+For example, the file `/home/ben/mysite/posts/2012/04/my-new-post.mkd` will have a URL of `http://localhost/2012/04/my-new-post`. 
 
 There is no database involved, which means that you can easily use your version control system of choice to manage and deploy your site.
 
@@ -21,6 +22,7 @@ On your server:
 	$> git clone git@github.com:benrhughes/crashdown.git /home/ben/mysite
 
 Optionally:
+
 	$> npm install -g forever 
 	
 There are some configuration options set in `config.json`, such as the port that the server listens on.
@@ -33,6 +35,7 @@ Using `forever` is completely optional, but it's a nice way to run crashdown in 
 
 ## Creating a new post
 The easiest way to get started is to copy the demo json file. In mysite/pages:
+
 	$> cp hello.json firstpost.json
 	$> touch firstpost.mkd
 
