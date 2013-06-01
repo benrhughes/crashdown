@@ -1,6 +1,7 @@
-## Note!
-Crashdown has reached a stage where it is functional, however the helper scripts I had planned to write haven't yet been done. If you're keen you can simply clone the git repo then run `node server.js`.
-
+## 10 Second Setup
+	$> git clone git@github.com:benrhughes/crashdown.git /home/ben/mysite
+	$> node /home/ben/mysite/server.js	
+	
 ## About
 Crashdown is a simple, file-based web publishing engine. Posts are written in Markdown and URLs are based on your directory structure.
 
