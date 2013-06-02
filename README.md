@@ -8,7 +8,7 @@ Go to [http://localhost:3000](http://localhost:3000) in your browser
 ## About
 Crashdown is a simple, file-based web publishing engine. Posts are written in Markdown and URLs are based on your directory structure.
 
-For example, the file `/home/ben/mysite/posts/2012/04/my-new-post.mkd` will have a URL of `http://localhost/2012/04/my-new-post`. 
+For example, the file `/home/ben/mysite/pages/2012/04/my-new-post.mkd` will have a URL of `http://localhost/2012/04/my-new-post`. 
 
 There is no database involved, which means that you can easily use your version control system of choice to manage and deploy your site.
 
