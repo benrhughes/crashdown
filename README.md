@@ -2,7 +2,7 @@
 	$> git clone git@github.com:benrhughes/crashdown.git /home/ben/mysite
 	$> cd /home/ben/mysite && npm install 
 	$> node /home/ben/mysite/server.js	
-	$> http://localhost:3000 in your browser
+	Go to http://localhost:3000 in your browser
 	
 ## About
 Crashdown is a simple, file-based web publishing engine. Posts are written in Markdown and URLs are based on your directory structure.
