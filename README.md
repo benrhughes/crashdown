@@ -1,10 +1,14 @@
-## Note!
-Crashdown has reached a stage where it is functional, however the helper scripts described below have not yet been written. If you're keen you can simply clone the git repo then run `node server.js`.
-
+## 10 Second Setup
+	$> git clone git@github.com:benrhughes/crashdown.git /home/ben/mysite
+	$> cd /home/ben/mysite && npm install 
+	$> node /home/ben/mysite/server.js	
+	
+Go to [http://localhost:3000](http://localhost:3000) in your browser
+	
 ## About
 Crashdown is a simple, file-based web publishing engine. Posts are written in Markdown and URLs are based on your directory structure.
 
-For example, the file `/home/ben/mysite/posts/2012/04/my-new-post.mkd` will have a URL of `mysite.com/2012/04/my-new-post`. 
+For example, the file `/home/ben/mysite/pages/2012/04/my-new-post.mkd` will have a URL of `http://localhost/2012/04/my-new-post`. 
 
 There is no database involved, which means that you can easily use your version control system of choice to manage and deploy your site.
 
@@ -17,9 +21,12 @@ I like writing in markdown, and I like being about to track and move my files ar
 ## Getting set up
 On your server:
 
-	$> npm install -g crashdown
-	$> npm install -g forever
-	$> crashdown init /home/ben/mysite # creates mysite directory and populates it
+	$> git clone git@github.com:benrhughes/crashdown.git /home/ben/mysite
+	$> cd /home/ben/mysite $$ npm install
+
+Optionally:
+
+	$> npm install -g forever 
 	
 There are some configuration options set in `config.json`, such as the port that the server listens on.
 
@@ -30,19 +37,20 @@ Using `forever` is completely optional, but it's a nice way to run crashdown in 
 	$> node /home/ben/mysite/server.js
 
 ## Creating a new post
-In mysite/posts:
+The easiest way to get started is to copy the demo json file. In mysite/pages:
 
-	$> crashdown post <url-slug>
+	$> cp hello.json firstpost.json
+	$> touch firstpost.mkd
 
-This will create `url-slug.mkd` and `url-slug.json`. Edit the .mkd file to contain the body of your post, then fill out the metadata in the .json file. 
+Edit the .mkd file to contain the body of your post, then fill out the metadata in the .json file. 
 
-Go to `mysite.com/url-slug` in your browser: your post should be displayed.
+Go to `localhost:3000/firstpost` in your browser: your post should be displayed.
 
 ## Setting up git deployment
 Follow the instructions in this [excellent article](http://toroid.org/ams/git-website-howto).
 
 ## Testing before deployment
-The entire site is contained in the git repository, which means that it can be tested locally before pushing by running `crashdown mysite` on your local machine, then going to `http://localhost` in your browser.
+The entire site is contained in the git repository, which means that it can be tested locally before pushing by running `node server.js` on your local machine, then going to `http://localhost:3000` in your browser.
 
 If you want to regularly share your test site with others, you can set up a second instance of crashdown (running on a seperate server, or on a different port on your prod server) and push to it before you push to prod.
 
