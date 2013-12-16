@@ -1,0 +1,22 @@
+#!/usr/local/bin/node
+
+var fs = require('fs')
+var prompt = require('prompt')
+
+prompt.start();
+
+prompt.get(['author','title', 'summary', 'tags'], function(err, data){
+	data.date = new Date();
+
+	if(data.tags && !Array.isArray(data.tags))
+		data.tags = [data.tags];
+
+	var file = __dirname + '/pages/' + data.title.replace(/\s/g,'-');
+
+	fs.writeFile(file + '.json', JSON.stringify(data, null, '\t'), function(err){
+		fs.writeFile(file + '.mkd', '');
+	});
+
+});
+
+

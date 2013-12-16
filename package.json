@@ -13,7 +13,8 @@
     "marked": "~0.2.8",
     "watchr": "~2.3.7",
     "moment": "~1.7.2",
-    "xml2js": "~0.2.8"
+    "xml2js": "~0.2.8",
+    "prompt": "~0.2.12"
   },
   "devDependencies": {},
   "scripts": {
