@@ -1,22 +1,23 @@
-#!/usr/local/bin/node
-
+#!/usr/local/bin/node 
 var fs = require('fs')
 var prompt = require('prompt')
+var path = require('path');
 
+prompt.message = 'Page';
 prompt.start();
 
-prompt.get(['author','title', 'summary', 'tags'], function(err, data){
+var file;
+prompt.get(['author','title', 'folder', 'summary', 'tags'], function(err, data){
 	data.date = new Date();
 
 	if(data.tags && !Array.isArray(data.tags))
 		data.tags = [data.tags];
 
-	var file = __dirname + '/pages/' + data.title.replace(/\s/g,'-');
+	file = path.join(__dirname, 'pages', data.folder, data.title.replace(/\s/g,'-').toLowerCase());
 
 	fs.writeFile(file + '.json', JSON.stringify(data, null, '\t'), function(err){
-		fs.writeFile(file + '.mkd', '');
+		var mkd = file + '.mkd';
+		fs.writeFile(mkd, '');
 	});
-
 });
-
 
