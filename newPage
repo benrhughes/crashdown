@@ -3,6 +3,14 @@ var fs = require('fs')
 var prompt = require('prompt')
 var path = require('path');
 var mkdirp = require('mkdirp');
+var _ = require('underscore');
+var _partial = require('jsutils')._partial;
+
+function trim(str){
+	return _.isString(str) ? str.trim() : str;
+}
+
+var trimEach = _partial(_.map, trim);
 
 prompt.message = 'Page';
 prompt.start();
@@ -10,9 +18,9 @@ prompt.start();
 prompt.get(['author','title', 'folder', 'summary', 'tags'], function(err, data){
 	data.date = new Date();
 
-	if(data.tags && !Array.isArray(data.tags))
-		data.tags = [data.tags];
 
+	if(data.tags)
+		data.tags = trimEach(data.tags.split(','));
 	
 	var dir = path.join(__dirname, 'pages', data.folder);
 	var file = path.join(dir,  data.title.replace(/\s/g,'-').toLowerCase());
