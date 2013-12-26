@@ -4,20 +4,19 @@ var prompt = require('prompt')
 var path = require('path');
 var mkdirp = require('mkdirp');
 var _ = require('underscore');
-var _partial = require('jsutils')._partial;
+var partialRight = require('jsutils').partialRight;
 
 function trim(str){
 	return _.isString(str) ? str.trim() : str;
 }
 
-var trimEach = _partial(_.map, trim);
+var trimEach = partialRight(_.map, trim);
 
 prompt.message = 'Page';
 prompt.start();
 
 prompt.get(['author','title', 'folder', 'summary', 'tags'], function(err, data){
 	data.date = new Date();
-
 
 	if(data.tags)
 		data.tags = trimEach(data.tags.split(','));
