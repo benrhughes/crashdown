@@ -16,7 +16,8 @@
     "xml2js": "~0.2.8",
     "prompt": "~0.2.12",
     "mkdirp": "~0.3.5",
-    "jsutils": "git+https://github.com/benrhughes/jsutils.git"
+    "jsutils": "git+https://github.com/benrhughes/jsutils.git",
+    "editor": "0.0.6"
   },
   "devDependencies": {},
   "scripts": {
