@@ -25,7 +25,7 @@ prompt.get(['author','title', 'folder', 'summary', 'tags'], function(err, data){
 		data.tags = trimEach(data.tags.split(','));
 	
 	var dir = path.join(__dirname, 'pages', data.folder);
-	var file = path.join(dir,  data.title.replace(/\s/g,'-').toLowerCase());
+	var file = path.join(dir,  data.title.replace(/[^\w\d\s]/g, '').replace(/\s/g,'-').toLowerCase());
 
 	mkdirp(dir, function (){
 		fs.writeFile(file + '.json', JSON.stringify(data, null, '\t'), function(err){
