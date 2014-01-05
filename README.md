@@ -37,14 +37,9 @@ Using `forever` is completely optional, but it's a nice way to run crashdown in 
 	$> node /home/ben/mysite/server.js
 
 ## Creating a new post
-The easiest way to get started is to copy the demo json file. In mysite/pages:
+In the root directory there is a node script called newPage, which is a simple helper to create your .json metadata file and a blank markdown file. Run it with 
 
-	$> cp hello.json firstpost.json
-	$> touch firstpost.mkd
-
-Edit the .mkd file to contain the body of your post, then fill out the metadata in the .json file. 
-
-Go to `localhost:3000/firstpost` in your browser: your post should be displayed.
+	$> node newPage
 
 ## Setting up git deployment
 Follow the instructions in this [excellent article](http://toroid.org/ams/git-website-howto).
