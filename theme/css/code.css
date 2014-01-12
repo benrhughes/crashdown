@@ -1,0 +1,129 @@
+/*
+ * Monokai style - ported by Luigi Maselli - http://grigio.org
+ * Originally from https://github.com/isagalaev/highlight.js
+ * Modified to work with marked.js 
+ * */
+
+pre{
+	display: block; padding: 0.5em;
+	background: #272822;
+	color: #DDD;
+	font-family: 'Inconsolata', monospace, sans-serif;
+	line-height: 1em;
+	font-size: 14px;
+}
+
+.tag,
+.tag .title,
+.keyword,
+.literal,
+.strong,
+.change,
+.winutils,
+.flow,
+.lisp .title,
+.clojure .built_in,
+.nginx .title,
+.tex .special {
+	color: #F92672;
+}
+
+..constant,
+.asciidoc .code {
+	color: #66D9EF;
+}
+
+.code,
+.class .title,
+.header {
+	color: white;
+}
+
+.link_label,
+.attribute,
+.symbol,
+.symbol .string,
+.value,
+.regexp {
+	color: #BF79DB;
+}
+
+.link_url,
+.tag .value,
+.string,
+.bullet,
+.subst,
+.title,
+.emphasis,
+.haskell .type,
+.preprocessor,
+.pragma,
+.ruby .class .parent,
+.built_in,
+.sql .aggregate,
+.django .template_tag,
+.django .variable,
+.smalltalk .class,
+.javadoc,
+.django .filter .argument,
+.smalltalk .localvars,
+.smalltalk .array,
+.attr_selector,
+.pseudo,
+.addition,
+.stream,
+.envvar,
+.apache .tag,
+.apache .cbracket,
+.tex .command,
+.prompt {
+	color: #A6E22E;
+}
+
+.comment,
+.java .annotation,
+.smartquote,
+.blockquote,
+.horizontal_rule,
+.python .decorator,
+.template_comment,
+.pi,
+.doctype,
+.deletion,
+.shebang,
+.apache .sqbracket,
+.tex .formula {
+	color: #75715E;
+}
+
+.keyword,
+.literal,
+.css .id,
+.phpdoc,
+.title,
+.header,
+.haskell .type,
+.vbscript .built_in,
+.sql .aggregate,
+.rsl .built_in,
+.smalltalk .class,
+.diff .header,
+.chunk,
+.winutils,
+.bash .variable,
+.apache .tag,
+.tex .special,
+.request,
+.status {
+	font-weight: bold;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .cdata {
+	opacity: 0.5;
+}

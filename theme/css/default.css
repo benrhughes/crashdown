@@ -1,6 +1,6 @@
 body
 {
-	font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 16px "Merriweather", serif;
 	line-height: 1.625;
 	background: #fff; 
 	color: #373737;
@@ -8,14 +8,17 @@ body
 
 a { color: #1982d1; }
 
-h1 { font-size: 2em; }
+h1 { 
+	font-family: 'Roboto Slab', serif;
+	font-size: 2em; 
+}
 
 h2 { font-size: 1em; }
 
 blockquote
 {
-	font: 17px Georgia;
-	margin: 0px 50px 0px 50px;
+	border-left: 5px solid #ccc;
+	padding: 0px 10px 0px 10px;
 	font-style : italic;
 }
 
