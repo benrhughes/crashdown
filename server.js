@@ -68,7 +68,7 @@ app.get('/tag/:tag', function(req,res){
 app.get('/uploads/*', function(req, res){
 	var file = req.params[0];
 
-	res.sendfile(path.join(__dirname, themesDir, file));
+	res.sendfile(path.join(__dirname, uploadsDir, file));
 }
 );
 app.get('/static/*', function(req, res){
